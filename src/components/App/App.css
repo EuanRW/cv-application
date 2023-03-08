@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.App-header {
+  font-size: calc(10px + 2vmin);
+  padding: 20px;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,14 +19,24 @@
   }
 }
 
-.App-header {
-  border: 2px solid blue;
-  font-size: calc(10px + 2vmin);
-  padding: 20px;
-}
-
 .App-link {
   color: #61dafb;
+}
+
+main {
+  display: flex;
+}
+
+.form-container {
+  flex: 1 1 0;
+  padding: 10px;
+}
+
+.details-container {
+  flex: 1 1 0;
+  border: 1px solid green;
+  margin: 10px;
+  background-color: white;
 }
 
 @keyframes App-logo-spin {

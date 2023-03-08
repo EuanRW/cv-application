@@ -1,7 +1,9 @@
 :root {
-  --dark-background-color: #333;
+  --darker-background-color: #333;
+  --dark-background-color: #292929;
   --dark-color: #fff;
-  --light-background-color: #fff;
+  --lighter-background-color: #fff;
+  --light-background-color: #e6e6e6;
   --light--color: #333;
 }
 
@@ -13,4 +15,55 @@
 .light {
     background-color: var(--light-background-color);
     color: var(--light-color);
+}
+
+.darker {
+  background-color: var(--darker-background-color);
+  color: var(--dark-color);
+}
+
+.lighter {
+  background-color: var(--lighter-background-color);
+  color: var(--light-color);
+}
+
+button {
+  background-color: #008CBA;
+  border: 0px;
+  border-radius: 0.25rem;
+  color: white;
+  transition-duration: 0.4s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+button:hover {
+  background-color:   lightgray; /* Green */
+  color: grey;
+}
+
+form {
+  padding: 0 10px 0 10px;
+  text-align: right;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.title-container h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.form-input {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  text-align: right;
 }

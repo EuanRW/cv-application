@@ -1,19 +1,40 @@
-import React from 'react'
-import type { ReactElement } from 'react'
+import React, { useEffect } from 'react'
 import '../../globals.css'
 import './Header.css'
 
 interface headerProps {
-  setThemeFunction: React.Dispatch<React.SetStateAction<string>>
+  theme: string
+  setTheme: React.Dispatch<React.SetStateAction<string>>
 }
 
-function Header (props: headerProps): ReactElement {
+const Header: React.FC<headerProps> = (props: headerProps) => {
+  const toggleTheme = (): void => {
+    if (props.theme === 'light') {
+      props.setTheme('dark')
+    } else {
+      props.setTheme('light')
+    }
+  }
+
+  useEffect(() => {
+    localStorage.setItem('theme', props.theme)
+    const header = document.querySelector('header')
+    if (header !== null) {
+      header.className = 'App-header ' + props.theme
+    }
+    document.body.className = props.theme + 'er'
+  }, [props.theme])
+
   return (
-    <div className="header">
-        <p>
-          My Curriculum Vitae
-        </p>
-        <button onClick={props.setThemeFunction}>Switch Theme</button>
+    <div className="header darkest" id="header">
+      <p>My Curriculum Vitae</p>
+      <button
+        onClick={(event: React.MouseEvent<HTMLElement>) => {
+          toggleTheme()
+        }}
+      >
+        Switch Theme
+      </button>
     </div>
   )
 }
