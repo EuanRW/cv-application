@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ExperienceForm, {
   type Experience
 } from '../ExperienceForm/ExperienceForm'
 import './ExperienceTable.css'
 
 interface ExperienceTableProps {
-  initialExperiences: Experience[]
+  experiences: Experience[]
+  setExperiences: React.Dispatch<React.SetStateAction<Experience[]>>
 }
 
-const ExperienceTable: React.FC<ExperienceTableProps> = ({ initialExperiences }) => {
-  const [experiences, setExperiences] = useState(initialExperiences)
-
+const ExperienceTable: React.FC<ExperienceTableProps> = ({ experiences, setExperiences }) => {
   const handleSave = (experience: Experience): void => {
     setExperiences([...experiences, experience])
   }
@@ -26,6 +25,7 @@ const ExperienceTable: React.FC<ExperienceTableProps> = ({ initialExperiences })
       <div className="title-container">
         <h3>Experience</h3>
       </div>
+      <ExperienceForm onSave={handleSave} />
       <table>
         <thead>
           <tr>
@@ -45,7 +45,7 @@ const ExperienceTable: React.FC<ExperienceTableProps> = ({ initialExperiences })
               <td className="ten-percent-width">{experience.startDate}</td>
               <td className="ten-percent-width">{experience.endDate}</td>
               <td className="fourty-percent-width">{experience.description}</td>
-              <td>
+              <td className="fourty-percent-width">
                 <button
                   onClick={() => {
                     handleDelete(index)
@@ -56,11 +56,6 @@ const ExperienceTable: React.FC<ExperienceTableProps> = ({ initialExperiences })
               </td>
             </tr>
           ))}
-          <tr>
-            <td colSpan={6}>
-              <ExperienceForm onSave={handleSave} />
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>

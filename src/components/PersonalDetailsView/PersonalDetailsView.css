@@ -1,0 +1,17 @@
+p {
+    padding: 0;
+    margin: 0;
+}
+
+#personal-detailsx-container {
+    margin-bottom: 20px;
+}
+
+#name {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#contact-details {
+    font-size: 20px;
+}

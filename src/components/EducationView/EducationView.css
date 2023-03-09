@@ -1,0 +1,18 @@
+.education-row {
+    margin-bottom: 10px;
+}
+
+.education-title-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.institution {
+    font-weight: bold;
+}
+
+.degree {
+    display: flex;
+}
+

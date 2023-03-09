@@ -4,7 +4,12 @@ import PersonalDetailsForm from './PersonalDetailsForm'
 
 describe('PersonalDetailsForm', () => {
   test('should update state when user enters details', () => {
-    render(<PersonalDetailsForm />)
+    render(<PersonalDetailsForm details={{
+      firstName: 'Euan',
+      lastName: 'Williams',
+      email: 'euanwilliams00@gmail.com',
+      phoneNumber: '+1 202-918-2132'
+    }} setDetails={() => {}}/>)
 
     const firstNameInput = screen.getByLabelText('First Name:')
     const lastNameInput = screen.getByLabelText('Last Name:')

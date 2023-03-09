@@ -1,22 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './PersonalDetailsForm.css'
 import '../../globals.css'
 
-interface PersonalDetails {
+export interface PersonalDetails {
   firstName: string
   lastName: string
   email: string
   phoneNumber: string
 }
 
-const PersonalDetailsForm: React.FC = () => {
-  const [details, setDetails] = useState<PersonalDetails>({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: ''
-  })
+interface props {
+  details: PersonalDetails
+  setDetails: React.Dispatch<React.SetStateAction<PersonalDetails>>
+}
 
+const PersonalDetailsForm: React.FC<props> = ({ details, setDetails }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = event.target
     setDetails((prevDetails) => ({ ...prevDetails, [name]: value }))

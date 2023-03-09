@@ -1,0 +1,18 @@
+.experience-row {
+    margin-bottom: 10px;
+}
+
+.experience-title-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.company {
+    font-weight: bold;
+}
+
+.description {
+    display: flex;
+}
+
