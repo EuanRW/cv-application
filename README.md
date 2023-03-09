@@ -1,5 +1,6 @@
 # cv-application
 
+[Live Demo](https://euanrw.github.io/cv-application/) :point_left:  
 A react app for creating a CV document.
 
 ## Objectives
@@ -11,6 +12,10 @@ A react app for creating a CV document.
 ## Project Status
 
 Complete
+
+## Project Screen Shot(s)
+
+![](/project.png)
 
 ## Technologies used
 
