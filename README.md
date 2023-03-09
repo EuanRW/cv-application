@@ -10,12 +10,16 @@ A react app for creating a CV document.
 
 ## Project Status
 
-In Progress
+Complete
 
 ## Technologies used
 
 - React
 - TypeScript
+
+## Todo
+
+- [ ] Store data in localStorage.
 
 ## Installation and Setup Instructions
 
